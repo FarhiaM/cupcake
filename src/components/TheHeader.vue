@@ -72,6 +72,7 @@ nav ul li {
   .header {
   grid-template-areas: 
     'logo . nav';
+  grid-template-rows: 1fr;
   grid-template-columns: auto 1fr auto;
   padding: 20px;
   }
