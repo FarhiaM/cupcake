@@ -1,0 +1,278 @@
+body {
+    background-color: pink;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    height: 1150px;
+    width: 1020px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #eee;
+    border: 1px solid;
+}
+
+.card {
+    width: 900px;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    width: 900px;
+    top: 0;
+    color: #ffd1dc;
+}
+
+.cupcake-image {
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 90%;
+}
+
+.header-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.circle {
+    border: 3px solid #FF4674;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.icon-house {
+    margin: 5px;
+    color: #FF4674;
+    background: url('/Users/farhia/Documents/dev 2019/cupcake-home-assignment/Assets/Icons/house.png');
+    height: 20px;
+    width: 20px;
+    right: 150px;
+    display: inherit;
+    right: 150px;
+}
+
+.icon-compass-arrow {
+    margin: 5px;
+    background: url('/Users/farhia/Documents/dev 2019/cupcake-home-assignment/Assets/Icons/compass-arrow.png');
+    height: 20px;
+    width: 20px;
+    right: 150px;
+    display: inherit;
+    right: 150px;
+}
+
+.icon-file {
+    margin: 5px;
+    background: url('/Users/farhia/Documents/dev 2019/cupcake-home-assignment/Assets/Icons/file.png');
+    height: 20px;
+    width: 20px;
+    right: 150px;
+    display: inherit;
+    right: 150px;
+}
+
+.icon-question-mark {
+    margin: 5px;
+    background: url('/Users/farhia/Documents/dev 2019/cupcake-home-assignment/Assets/Icons/question-mark.png');
+    height: 20px;
+    width: 20px;
+    right: 150px;
+    display: inherit;
+    right: 150px;
+}
+
+.icon-person {
+    margin: 5px;
+    background: url('/Users/farhia/Documents/dev 2019/cupcake-home-assignment/Assets/Icons/person.png');
+    height: 20px;
+    width: 20px;
+    right: 150px;
+    display: inherit;
+    right: 150px;
+}
+
+.cupcake-banner {
+    margin-top: 20px;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+.cupcake-banner-image {
+    margin-left: 20px;
+}
+
+.recipes {
+    margin-left: 20px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+.recipe-1 {
+    width: 33%;
+    margin-right: 50px;
+}
+
+.recipe-2 {
+    width: 33%;
+    margin-left: 50px;
+}
+
+.recipe-3 {
+    width: 33%;
+    margin-left: 50px;
+}
+
+.checkmark {
+    list-style-image: url("/Users/farhia/Documents/dev 2019/cupcake-home-assignment/Assets/Icons/check-mark.png");
+}
+
+.button {
+    margin-left: 10px;
+    background-color: #FF4674;
+    border-radius: 42px;
+    border: 1px solid #ee1eb5;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Signika-Light;
+    padding: 8px 44px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #c70067;
+}
+
+.button:hover {
+    background: linear-gradient(to bottom, #ef027d 5%, #ff5bb0 100%);
+    background-color: #ef027d;
+}
+
+.button:active {
+    position: relative;
+    top: 1px;
+}
+
+.button2 {
+    margin-left: 10px;
+    background-color: #FF4674;
+    border-radius: 42px;
+    border: 1px solid #ee1eb5;
+    display: flex;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Signika-Light;
+    padding: 8px 50px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #c70067;
+}
+
+.button2:hover {
+    background: linear-gradient(to bottom, #ef027d 5%, #ff5bb0 100%);
+    background-color: #ef027d;
+}
+
+.button2:active {
+    position: relative;
+    top: 1px;
+}
+
+.button2 .icon {
+    background: url('/Users/farhia/Documents/dev 2019/cupcake-home-assignment/Assets/Icons/heart.png') no-repeat;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px
+}
+
+.taste-bar {
+    width: 940px;
+    margin-top: 50px;
+    margin-left: 20px;
+    display: flex;
+    flex-flow: row;
+}
+
+.copyright-text {
+    display: flex;
+    flex-flow: column;
+}
+
+.footer {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    width: 1020px;
+    color: #FF4674;
+    background-color: #FF4674;
+}
+
+.p-padd-mar {
+    white-space: pre-line;
+    margin-left: 20px;
+}
+
+h3 {
+    margin-right: 50px;
+}
+
+span {
+    padding: 22px;
+    margin-right: 10px;
+}
+
+p:first-child {
+    margin-top: 12px;
+}
+
+p:last-child {
+    margin-bottom: 12px;
+}
+
+.Signika-Bold {
+    color: rgb(165, 49, 78);
+    margin-left: 20px;
+    font-family: "Signika-Bold";
+}
+
+.Signika-Light {
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+    font-family: "Signika-Light";
+}
+
+.Signika-Regular {
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+    font-family: "Signika-Regular";
+}
+
+.Signika-Semibold {
+    color: rgb(184, 102, 122);
+    margin-left: 20px;
+    font-family: "Signika-Semibold";
+}
+
+@font-face {
+    font-family: "Signika-Bold";
+    src: url("/Users/farhia/Documents/dev 2019/cupcake-home-assignment/Assets/Fonts/Signika-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Signika-Light";
+    src: url("/Users/farhia/Documents/dev 2019/cupcake-home-assignment/Assets/Fonts/Signika-Light.ttf");
+}
+
+@font-face {
+    font-family: "Signika-Regular";
+    src: url("/Users/farhia/Documents/dev 2019/cupcake-home-assignment/Assets/Fonts/Signika-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Signika-Semibold";
+    src: url("/Users/farhia/Documents/dev 2019/cupcake-home-assignment/Assets/Fonts/Signika-Semibold.ttf");
+}
