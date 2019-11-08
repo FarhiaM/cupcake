@@ -4,20 +4,25 @@
       <router-link to="/">Cupcakes & Cookies</router-link>
     </h1>
     <nav role="navigation">
-      <ul class="icon-buttons/">
-        <li class="icon-house"><router-link to="/">Home</router-link></li>
-        <li class="icon-compass-arrow"><router-link to="/">Arrow</router-link></li>
-        <li class="icon-file"><router-link to="/">File</router-link></li>
-        <li class="icon-question-mark"><router-link to="/">FAQ</router-link></li>
-        <li class="icon-person"><router-link to="/">Profile</router-link></li>
+      <ul class="icon-buttons">
+        <Buttons iconname="icon-house">Home</Buttons>
+        <Buttons iconname="icon-compass-arrow">Arrow</Buttons> 
+        <Buttons iconname="icon-file">File</Buttons> 
+        <Buttons iconname="icon-question-mark">FAQ</Buttons> 
+        <Buttons iconname="icon-person">Profile</Buttons>
       </ul>
     </nav>
   </header>
 </template>
 
 <script>
+import Buttons from './Buttons';
+
 export default {
-  name: "TheHeader"
+  name: "TheHeader",
+   components: {
+    Buttons
+   }
 };
 </script>
 
@@ -27,6 +32,7 @@ export default {
   grid-template-rows: repeat(1, 1fr);
   grid-gap: 20;
   padding: 10px;
+  align-items: center;
   .logo {
     margin: 0;
     a {
@@ -49,12 +55,7 @@ nav {
     margin: 0;
   }
 }
-nav ul li {
-  background: #ee2461;
-  border-radius: 40px;
-  float: left;
-  margin-left: 10px;
-}
+
 
 @media (min-width: 768px) and (max-width: 1023px) {
   // tablet
@@ -91,71 +92,6 @@ nav ul li {
   flex-direction: row;
   align-items: center;
   margin-right: 10px;
-}
-
-.icon-house {
-  margin: 5px;
-  color: #ff4674;
-  background-image: url("../assets/Icons/house.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 44px;
-  width: 44px;
-  right: 150px;
-  display: inherit;
-  right: 150px;
-}
-
-.icon-compass-arrow {
-  margin: 5px;
-  color: #ff4674;
-  background-image: url("../assets/Icons/compass-arrow.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 44px;
-  width: 44px;
-  right: 150px;
-  display: inherit;
-  right: 150px;
-}
-
-.icon-file {
-  margin: 5px;
-  color: #ff4674;
-  background-image: url("../assets/Icons/file.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 44px;
-  width: 44px;
-  right: 150px;
-  display: inherit;
-  right: 150px;
-}
-
-.icon-question-mark {
-  margin: 5px;
-  color: #ff4674;
-  background-image: url("../assets/Icons/question-mark.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 44px;
-  width: 44px;
-  right: 150px;
-  display: inherit;
-  right: 150px;
-}
-
-.icon-person {
-  margin: 5px;
-  color: #ff4674;
-  background-image: url("../assets/Icons/person.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 44px;
-  width: 44px;
-  right: 150px;
-  display: inherit;
-  right: 150px;
 }
 
 /*menu*/

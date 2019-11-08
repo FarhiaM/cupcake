@@ -14,6 +14,7 @@
         <li class="checkmark Signika-Light">Tiramisu cupcake</li>
         <li class="checkmark Signika-Light">Lemon drops faroki</li>
       </lu>
+      <Buttons slot="button" iconText="veja mais"></Buttons>
       </Option>
 
       <Option class="recipe-1">
@@ -24,6 +25,7 @@
         <li class="checkmark Signika-Light">hupa chups wafer</li>
         <li class="checkmark Signika-Light">Danish marzipan</li>
       </lu>
+      <Buttons slot="button" iconname="icon-house">Twitter</Buttons>
       </Option>
 
       <Option class="recipe-1">
@@ -36,6 +38,7 @@
         <li class="checkmark Signika-Light">Brownie pie gummi bears</li>
         <li class="checkmark Signika-Light">Jelly beans dragée</li>
       </lu>
+      <Buttons slot="button" iconname="icon-house">Twitter</Buttons>
       </Option>
     </div>
   </div>
@@ -44,12 +47,14 @@
 <script>
 import Carousel from "@/components/Carousel";
 import Option from "@/components/Option";
+import Buttons from "@/components/Buttons";
 
 export default {
   name: "home",
   components: {
     Carousel,
-    Option
+    Option,
+    Buttons
   }
 };
 </script>

@@ -6,15 +6,17 @@
     </div>-->
     <the-header />
     <router-view />
+    <Footer />
   </div>
 </template>
 
 <script>
 import TheHeader from "./components/TheHeader";
-
+import Footer from './components/Footer';
 export default {
   components: {
-    TheHeader
+    TheHeader,
+    Footer
   }
 };
 </script>
@@ -48,7 +50,6 @@ body {
   #app {
     width: 1000px;
     margin: 20px auto;
-    padding: 0 20px;
   }
 }
 </style>
