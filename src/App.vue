@@ -33,7 +33,6 @@ body {
   box-shadow: #666666 0px 0px 7px;
   overflow: hidden;
   border-radius: 10px;
-  padding: 0 10px;
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {

@@ -1,7 +1,7 @@
 <template>
-  <div class="button">
-    <li :class="iconname"><router-link to="/"></router-link></li>
-    {{iconText}}
+  <div class="button-container">
+    <button :class="iconname"><i :class="icon"></i></button>
+    <span>{{iconText}}</span>
   </div>
 </template>
 
@@ -16,6 +16,10 @@ export default {
     iconText: {
       type: String,
       default: ""
+    },
+    icon: {
+      type: String,
+      default: ""
     }
   }
 };
@@ -23,19 +27,32 @@ export default {
 
 <style lang="scss">
 
-.button{
+button{
+   background: transparent;
+   border: none;
+   font-size: 25px;    
+}
+
+.button-container{
   list-style-type: none;
   background: #ee2461;
   border-radius: 40px;
   float: left;
-  margin-left: 10px;
+  width: auto;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  margin: 0px 5px 0px 5px;
 }
 
-div li:hover {
+div button:hover {
   box-shadow: #555555 0 0 6px;
 }
 
-div li a {
+div button a {
   text-indent: -9999px;
   width: 42px;
   height: 42px;
@@ -44,13 +61,6 @@ div li a {
   cursor: pointer;
 }
 
-.icons {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 10px;
-  padding: 0;
-  margin: 0;
-}
 
 
 .icon-house {

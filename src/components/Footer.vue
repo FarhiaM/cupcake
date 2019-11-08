@@ -6,9 +6,9 @@
   </div>
     <nav role="navigation-footer">
       <ul class="icon-buttons">
-        <Buttons icons="icon-twitter">Twitter</Buttons>
-        <Buttons iconname="icon-facebook">Facebook</Buttons>
-        <Buttons iconname="icon-linkedin">LinkedIn</Buttons>
+        <Buttons icon="fab fa-twitter">Twitter</Buttons>
+        <Buttons icon="fab fa-facebook">Facebook</Buttons>
+        <Buttons icon="fab fa-linkedin">LinkedIn</Buttons>
       </ul>
     </nav>
   </div>

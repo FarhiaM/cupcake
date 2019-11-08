@@ -4,13 +4,11 @@
       <router-link to="/">Cupcakes & Cookies</router-link>
     </h1>
     <nav role="navigation">
-      <ul class="icon-buttons">
-        <Buttons iconname="icon-house">Home</Buttons>
-        <Buttons iconname="icon-compass-arrow">Arrow</Buttons> 
-        <Buttons iconname="icon-file">File</Buttons> 
-        <Buttons iconname="icon-question-mark">FAQ</Buttons> 
-        <Buttons iconname="icon-person">Profile</Buttons>
-      </ul>
+        <Buttons style="width: 50px" icon="fas fa-home">Home</Buttons>
+        <Buttons style="width: 50px" icon="fas fa-compass">Arrow</Buttons> 
+        <Buttons style="width: 50px" icon="far fa-sticky-note">File</Buttons> 
+        <Buttons style="width: 50px" icon="fas fa-question">FAQ</Buttons> 
+        <Buttons style="width: 50px" icon="fas fa-user-alt">Profile</Buttons>
     </nav>
   </header>
 </template>
@@ -27,12 +25,14 @@ export default {
 </script>
 
 <style lang="scss">
+
 .header {
   display: grid;
   grid-template-rows: repeat(1, 1fr);
   grid-gap: 20;
   padding: 10px;
   align-items: center;
+  justify-content: space-evenly;
   .logo {
     margin: 0;
     a {
@@ -47,13 +47,6 @@ export default {
 
 nav {
   width: 100%;
-  ul {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 10px;
-    padding: 0;
-    margin: 0;
-  }
 }
 
 
@@ -92,31 +85,5 @@ nav {
   flex-direction: row;
   align-items: center;
   margin-right: 10px;
-}
-
-/*menu*/
-nav ul li:hover {
-  box-shadow: #555555 0 0 6px;
-}
-
-nav ul li a {
-  text-indent: -9999px;
-  width: 42px;
-  height: 42px;
-  display: block;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-nav ul li.home a {
-  background-position: center -1102px;
-}
-nav ul li.oQueE a {
-  background-position: center -830px;
-}
-nav ul li.planos a {
-  background-position: center -1170px;
-}
-nav ul li.faq a {
-  background-position: center -898px;
 }
 </style>
