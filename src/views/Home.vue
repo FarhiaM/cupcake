@@ -14,6 +14,7 @@
         <li class="checkmark Signika-Light">Tiramisu cupcake</li>
         <li class="checkmark Signika-Light">Lemon drops faroki</li>
       </lu>
+      <Buttons slot="button" iconText="veja mais" icon="fas fa-plus-circle" style="padding-right: 15px; margin: 10px 10px"></Buttons>
       </Option>
 
       <Option class="recipe-1">
@@ -24,6 +25,7 @@
         <li class="checkmark Signika-Light">hupa chups wafer</li>
         <li class="checkmark Signika-Light">Danish marzipan</li>
       </lu>
+      <Buttons slot="button" iconText="veja mais" icon="fas fa-plus-circle" style="padding-right: 15px"></Buttons>
       </Option>
 
       <Option class="recipe-1">
@@ -36,6 +38,7 @@
         <li class="checkmark Signika-Light">Brownie pie gummi bears</li>
         <li class="checkmark Signika-Light">Jelly beans dragée</li>
       </lu>
+      <Buttons slot="button" iconText="veja mais" icon="fas fa-plus-circle" style="padding-right: 15px"></Buttons>
       </Option>
     </div>
   </div>
@@ -44,12 +47,14 @@
 <script>
 import Carousel from "@/components/Carousel";
 import Option from "@/components/Option";
+import Buttons from "@/components/Buttons";
 
 export default {
   name: "home",
   components: {
     Carousel,
-    Option
+    Option,
+    Buttons
   }
 };
 </script>
@@ -61,8 +66,9 @@ export default {
   font-size: 1.2rem;
 }
 .home {
-  margin-bottom: 20px;
+  margin: 16px;
 }
+
 @font-face {
     font-family: "Signika-Bold";
     src: url("../assets/Fonts/Signika-Bold.ttf");
@@ -75,6 +81,7 @@ export default {
     font-family: "Signika-Light";
     src: url("../assets/Fonts/Signika-Light.ttf");
 }
+
 .recipes {
   width: 100%;
   display: flex;
