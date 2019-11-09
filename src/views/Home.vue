@@ -25,7 +25,7 @@
         <li class="checkmark Signika-Light">hupa chups wafer</li>
         <li class="checkmark Signika-Light">Danish marzipan</li>
       </lu>
-      <Buttons slot="button" iconText="veja mais" icon="fas fa-plus-circle" style="padding-right: 15px"></Buttons>
+      <Buttons slot="button" iconText="veja mais" icon="fas fa-plus-circle" style="padding-right: 15px; margin: 10px 10px"></Buttons>
       </Option>
 
       <Option class="recipe-1">
@@ -38,9 +38,14 @@
         <li class="checkmark Signika-Light">Brownie pie gummi bears</li>
         <li class="checkmark Signika-Light">Jelly beans dragée</li>
       </lu>
-      <Buttons slot="button" iconText="veja mais" icon="fas fa-plus-circle" style="padding-right: 15px"></Buttons>
+      <Buttons slot="button" iconText="veja mais" icon="fas fa-plus-circle" style="padding-right: 15px; margin: 10px 10px"></Buttons>
       </Option>
     </div>
+
+  <div class="recipes-info">
+    <Buttons slot="button" iconText="Faca um taste" icon="far fa-heart" style="padding-right: 15px"></Buttons>
+    <p class="Signika-Light infotext">Cupcake ipsum dorum sit amet carrot cake marshmellow wypas. Muffin lemon drops I love carmels chocolate bar.</p>
+  </div>
   </div>
 </template>
 
@@ -67,6 +72,19 @@ export default {
 }
 .home {
   margin: 16px;
+}
+
+.recipes-info{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  margin-top: 20px;
+}
+
+.infotext{
+  margin-top: 20px;
+  font-style: italic;
 }
 
 @font-face {
@@ -129,6 +147,18 @@ export default {
   .recipe-1 {
     width: 30%;
   }
+
+  .recipes-info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 60px 30px;
+}
+
+.infotext{
+  margin-left: 40px;
+  font-style: italic;
+}
 }
 
 </style>
