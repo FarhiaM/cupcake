@@ -40,10 +40,6 @@ export default {
     font-style: italic;
 }
 
-.copyright-info{
-
-}
-
 @media (min-width: 768px) and (max-width: 1023px) {
   // tablet
   .footer {
@@ -73,7 +69,7 @@ export default {
   background: #ee2461;
   display: grid;
   grid-template-rows: repeat(1, 1fr);
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   grid-gap: 20;
   padding: 10px;
