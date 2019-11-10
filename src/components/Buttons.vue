@@ -42,6 +42,7 @@ button{
    background: transparent;
    border: none;
    font-size: 25px;    
+   outline: none;
 }
 
 .button-container{
