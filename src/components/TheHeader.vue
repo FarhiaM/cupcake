@@ -4,9 +4,9 @@
       <router-link to="/">Cupcakes & Cookies</router-link>
     </h1>
     <nav role="navigation">
-        <Buttons style="width: 50px" icon="fas fa-home">Home</Buttons>
-        <Buttons style="width: 50px" icon="fas fa-compass">Arrow</Buttons> 
-        <Buttons style="width: 50px" icon="far fa-sticky-note">File</Buttons> 
+        <Buttons style="width: 50px" icon="fas fa-home" iconRouter="/">Home</Buttons>
+        <Buttons style="width: 50px" icon="fas fa-compass" iconRouter="/map">Arrow</Buttons> 
+        <Buttons style="width: 50px" icon="far fa-sticky-note" iconRouter="/about">>File</Buttons> 
         <Buttons style="width: 50px" icon="fas fa-question">FAQ</Buttons> 
         <Buttons style="width: 50px" icon="fas fa-user-alt">Profile</Buttons>
     </nav>

@@ -157,6 +157,7 @@ export default {
 
 .infotext{
   margin-left: 40px;
+  margin-top: 5;
   font-style: italic;
 }
 }
