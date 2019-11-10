@@ -4,10 +4,10 @@
       <router-link to="/">Cupcakes & Cookies</router-link>
     </h1>
     <nav role="navigation">
-        <Buttons style="width: 50px" icon="fas fa-home">Home</Buttons>
-        <Buttons style="width: 50px" icon="fas fa-compass">Arrow</Buttons> 
-        <Buttons style="width: 50px" icon="far fa-sticky-note">File</Buttons> 
-        <Buttons style="width: 50px" icon="fas fa-question">FAQ</Buttons> 
+        <Buttons style="width: 50px" icon="fas fa-home" iconRouter="/">Home</Buttons>
+        <Buttons style="width: 50px" icon="fas fa-compass" iconRouter="/maps">Arrow</Buttons> 
+        <Buttons style="width: 50px" icon="far fa-sticky-note" iconRouter="/about">About</Buttons> 
+        <Buttons style="width: 50px" icon="fas fa-question" iconRouter="/faq">FAQ</Buttons> 
         <Buttons style="width: 50px" icon="fas fa-user-alt">Profile</Buttons>
     </nav>
   </header>
@@ -24,7 +24,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .header {
   display: grid;
@@ -54,7 +54,6 @@ nav {
   // tablet
   .header {
   grid-template-rows: 1fr;
-  grid-template-columns: 1fr 2fr;
   grid-gap: 10px;
   align-items: center;
   padding: 15px;

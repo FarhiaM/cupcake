@@ -1,7 +1,9 @@
 <template>
   <div class="button-container">
+    <router-link :to="iconRouter">
     <button :class="iconname"><i :class="icon"></i></button>
     <span>{{iconText}}</span>
+    </router-link>
   </div>
 </template>
 
@@ -20,12 +22,21 @@ export default {
     icon: {
       type: String,
       default: ""
+    },
+    iconRouter: {
+      type: String,
+      default: "/"
     }
   }
 };
 </script>
 
 <style lang="scss">
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 
 button{
    background: transparent;

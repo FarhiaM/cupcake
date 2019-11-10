@@ -9,10 +9,7 @@
 
 <script>
 export default {
-  name: 'Option',
-  data() {
-
-  }
+  name: 'Option'
 }
 </script>
 
