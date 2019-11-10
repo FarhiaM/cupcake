@@ -1,6 +1,16 @@
 <template>
   <div class="carousel">
-    <carousel :per-page=1 autoplay :autoplayTimeout=3000 loop paginationActiveColor="#ff4674" paginationColor="#ffc0cb" :paginationSize=12 paginationPosition="bottom-overlay">
+    <carousel
+      :per-page="1"
+      autoplay
+      :autoplayTimeout="3000"
+      loop
+      paginationActiveColor="#ff4674"
+      paginationColor="#ffc0cb"
+      :paginationSize="12"
+      paginationPosition="bottom-overlay"
+      :navigationEnabled="true"
+    >
       <slide>
         <img
           class="cupcake-banner-image"
@@ -52,14 +62,17 @@ export default {
 </script>
 
 <style>
-.cupcake-banner {
-  margin-top: 20px;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
 .cupcake-banner-image {
   width: 100%;
+}
+.VueCarousel-navigation .VueCarousel-navigation-button {
+  color:#ee2461;
+  font-size: 40px;
+}
+.VueCarousel-navigation .VueCarousel-navigation-next {
+  right: 60px;
+}
+.VueCarousel-navigation .VueCarousel-navigation-prev {
+  left: 60px;
 }
 </style>
