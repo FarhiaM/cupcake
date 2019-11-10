@@ -66,14 +66,11 @@ export default {
 
 <style lang="scss" scoped>
 * {
-  margin: 0;
-  padding: 0;
   font-size: 1.2rem;
 }
 .home {
   margin: 16px;
 }
-
 .recipes-info{
   display: flex;
   flex-direction: column;
@@ -81,14 +78,12 @@ export default {
   justify-content: left;
   margin-top: 20px;
 }
-
 .infotext{
   margin-top: 20px;
   font-style: italic;
 }
-
 .button-container{
-  padding-right: 15px; 
+  padding: 0 15px;
   margin: 10px 10px;
 }
 @font-face {
