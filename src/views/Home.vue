@@ -66,8 +66,6 @@ export default {
 
 <style lang="scss" scoped>
 * {
-  margin: 0;
-  padding: 0;
   font-size: 1.2rem;
 }
 .home {
