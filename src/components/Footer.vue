@@ -24,7 +24,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 @font-face {
     font-family: "Signika-Regular";
@@ -44,7 +44,7 @@ export default {
   // tablet
   .footer {
   grid-template-rows: 1fr;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 4fr 2fr;
   grid-gap: 10px;
   align-items: center;
   padding: 15px;
@@ -60,7 +60,8 @@ export default {
   grid-template-columns: auto 1fr auto;
   padding: 20px;
   }
-  .navigation-footer{
+
+  nav{
     grid-area: nav;
   }
 }
@@ -90,24 +91,6 @@ export default {
   border-radius: 40px;
   float: left;
   margin-left: 10px;
-}
-
-.icon-twitter {
-  background-image: url("../assets/Icons/twitter.png");
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.icon-facebook {
-  background-image: url("../assets/Icons/facebook.png");
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.icon-linkedin {
-  background-image: url("../assets/Icons/linkedin.png");
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 </style>

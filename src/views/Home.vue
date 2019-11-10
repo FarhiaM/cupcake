@@ -8,42 +8,42 @@
       <Option class="recipe-1">
       <h4 slot="title" class="Signika-Semibold">Option A</h4>
       <p slot="paragraph" class="Signika-Light">Tart marzipan tart pastry cake jelly-o. Sugar plum pudding macroon liqriouse I love. Pastry dessert cookie tart. I love I love topping danish.</p>
-      <lu slot="list">
+      <ul slot="list">
         <li class="checkmark Signika-Light">Candy cane cheesecake</li>
         <li class="checkmark Signika-Light">Apple pie wafer</li>
         <li class="checkmark Signika-Light">Tiramisu cupcake</li>
         <li class="checkmark Signika-Light">Lemon drops faroki</li>
-      </lu>
-      <Buttons slot="button" iconText="veja mais" icon="fas fa-plus-circle" style="padding-right: 15px; margin: 10px 10px"></Buttons>
+      </ul>
+      <Buttons slot="button" iconText="veja mais" icon="fas fa-plus-circle"></Buttons>
       </Option>
 
       <Option class="recipe-1">
       <h4 slot="title" class="Signika-Semibold">Option B</h4>
       <p slot="paragraph" class="Signika-Light">Halvah wypas pudding I love candy toffee. Jelly beans chupa chups pudding danish I love donut. I love danish bonbon jelly-o I love gummies cotton candy marzipan danish. Donut sweet pastry jujubes croissant.</p>
-      <lu slot="list">
+      <ul slot="list">
         <li class="checkmark Signika-Light">Tootsie roll cheesecake</li>
         <li class="checkmark Signika-Light">hupa chups wafer</li>
         <li class="checkmark Signika-Light">Danish marzipan</li>
-      </lu>
-      <Buttons slot="button" iconText="veja mais" icon="fas fa-plus-circle" style="padding-right: 15px; margin: 10px 10px"></Buttons>
+      </ul>
+      <Buttons slot="button" iconText="veja mais" icon="fas fa-plus-circle"></Buttons>
       </Option>
 
       <Option class="recipe-1">
       <h4 slot="title" class="Signika-Semibold">Option C</h4>
       <p slot="paragraph" class="Signika-Light">Liquorice toffee marzipan lemon drops chocolate cake ice crearri.</p>
-      <lu slot="list">
+      <ul slot="list">
         <li class="checkmark Signika-Light">Chocolate marzipan jelly</li>
         <li class="checkmark Signika-Light">Sweet lollipop ice cream</li>
         <li class="checkmark Signika-Light">Souffié jelly-o bear clave sweet</li>
         <li class="checkmark Signika-Light">Brownie pie gummi bears</li>
         <li class="checkmark Signika-Light">Jelly beans dragée</li>
-      </lu>
-      <Buttons slot="button" iconText="veja mais" icon="fas fa-plus-circle" style="padding-right: 15px; margin: 10px 10px"></Buttons>
+      </ul>
+      <Buttons slot="button" iconText="veja mais" icon="fas fa-plus-circle"></Buttons>
       </Option>
     </div>
 
   <div class="recipes-info">
-    <Buttons slot="button" iconText="Faca um taste" icon="far fa-heart" style="padding-right: 15px"></Buttons>
+    <Buttons slot="button" iconText="Faca um taste" icon="far fa-heart" style="margin: 0px"></Buttons>
     <p class="Signika-Light infotext">Cupcake ipsum dorum sit amet carrot cake marshmellow wypas. Muffin lemon drops I love carmels chocolate bar.</p>
   </div>
   </div>
@@ -87,6 +87,10 @@ export default {
   font-style: italic;
 }
 
+.button-container{
+  padding-right: 15px; 
+  margin: 10px 10px;
+}
 @font-face {
     font-family: "Signika-Bold";
     src: url("../assets/Fonts/Signika-Bold.ttf");

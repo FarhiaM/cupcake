@@ -1,6 +1,6 @@
 <template>
   <div class="carousel">
-    <carousel per-page="1" autoplay autoplayTimeout="3000" loop paginationActiveColor="#ff4674" paginationColor="#ffc0cb" paginationSize="12" paginationPosition="bottom-overlay">
+    <carousel :per-page=1 autoplay :autoplayTimeout=3000 loop paginationActiveColor="#ff4674" paginationColor="#ffc0cb" :paginationSize=12 paginationPosition="bottom-overlay">
       <slide>
         <img
           class="cupcake-banner-image"
