@@ -6,7 +6,7 @@
     <nav role="navigation">
         <Buttons style="width: 50px" icon="fas fa-home" iconRouter="/">Home</Buttons>
         <Buttons style="width: 50px" icon="fas fa-compass" iconRouter="/maps">Arrow</Buttons> 
-        <Buttons style="width: 50px" icon="far fa-sticky-note" iconRouter="/about">>About</Buttons> 
+        <Buttons style="width: 50px" icon="far fa-sticky-note" iconRouter="/about">About</Buttons> 
         <Buttons style="width: 50px" icon="fas fa-question" iconRouter="/faq">FAQ</Buttons> 
         <Buttons style="width: 50px" icon="fas fa-user-alt">Profile</Buttons>
     </nav>
