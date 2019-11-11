@@ -29,7 +29,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @font-face {
   font-family: "Signika-Semibold";
   src: url("../assets/Fonts/Signika-Semibold.ttf");
