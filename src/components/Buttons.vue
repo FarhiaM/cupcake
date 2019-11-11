@@ -1,8 +1,10 @@
 <template>
   <div class="button-container">
     <router-link :to="iconRouter">
-    <button :class="iconname"><i :class="icon"></i></button>
-    <span>{{iconText}}</span>
+      <span :class="iconname" class="icon-wrapper">
+        <i :class="icon"></i>
+      </span>
+      <span v-if="iconText" class="button-description">{{iconText}}</span>
     </router-link>
   </div>
 </template>
@@ -32,20 +34,20 @@ export default {
 </script>
 
 <style lang="scss">
-
 a {
-  color: inherit;
-  text-decoration: inherit;
+  display: flex;
+  color: white;
+  text-decoration: none;
 }
 
-button{
-   background: transparent;
-   border: none;
-   font-size: 25px;    
-   outline: none;
+.icon-wrapper {
+  color: white;
+  background: transparent;
+  border: none;
+  font-size: 25px;
 }
 
-.button-container{
+.button-container {
   list-style-type: none;
   background: #ee2461;
   border-radius: 40px;
@@ -60,17 +62,21 @@ button{
   margin: 0px 5px 0px 5px;
 }
 
-div button:hover {
+div .icon-wrapper:hover {
   box-shadow: #555555 0 0 6px;
 }
 
-div button a {
+div .icon-wrapper a {
   text-indent: -9999px;
   width: 42px;
   height: 42px;
   display: block;
   background-repeat: no-repeat;
   cursor: pointer;
+}
+
+.button-description {
+  margin-left: 5px;
 }
 
 </style>
