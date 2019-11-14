@@ -1,14 +1,14 @@
 <template>
   <header class="header" role="banner">
-    <h1 class="logo">
-      <router-link to="/">Cupcakes & Cookies</router-link>
-    </h1>
-    <nav role="navigation">
-        <Buttons style="width: 50px" icon="fas fa-home" iconRouter="/">Home</Buttons>
-        <Buttons style="width: 50px" icon="fas fa-compass" iconRouter="/maps">Arrow</Buttons> 
-        <Buttons style="width: 50px" icon="far fa-sticky-note" iconRouter="/about">About</Buttons> 
-        <Buttons style="width: 50px" icon="fas fa-question" iconRouter="/faq">FAQ</Buttons> 
-        <Buttons style="width: 50px" icon="fas fa-user-alt">Profile</Buttons>
+    <div class="logo">
+      <router-link to="/"></router-link>
+    </div>
+    <nav role="navigation" class="navContainer">
+        <Buttons class="btnComponent" icon="fas fa-home" iconRouter="/">Home</Buttons>
+        <Buttons class="btnComponent" icon="fas fa-compass" iconRouter="/maps">Arrow</Buttons>
+        <Buttons class="btnComponent" icon="far fa-sticky-note" iconRouter="/about">About</Buttons>
+        <Buttons class="btnComponent" icon="fas fa-question" iconRouter="/faq">FAQ</Buttons>
+        <Buttons class="btnComponent" icon="fas fa-user-alt">Profile</Buttons>
     </nav>
   </header>
 </template>
@@ -40,13 +40,19 @@ export default {
       height: 82px;
       width: 282px;
       background: url("../assets/cupcakes_cookies.png") 0 0 no-repeat;
-      text-indent: -9999px;
     }
   }
 }
 
-nav {
-  width: 100%;
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+}
+
+.btnComponent {
+  width: 40px;
 }
 
 
@@ -63,7 +69,7 @@ nav {
 @media (min-width: 1024px) {
   //Desktop
   .header {
-  grid-template-areas: 
+  grid-template-areas:
     'logo . nav';
   grid-template-rows: 1fr;
   grid-template-columns: auto 1fr auto;
@@ -77,12 +83,9 @@ nav {
   nav{
     grid-area: nav;
   }
-}
 
-.header-buttons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-right: 10px;
+  .btnComponent {
+    width: 50px;
+  }
 }
 </style>

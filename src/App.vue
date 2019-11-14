@@ -24,7 +24,7 @@ body {
 
 #app {
   width: 90%;
-  margin: 10px auto;
+  margin: 0 auto;
   background: #fff;
   box-shadow: #666666 0px 0px 7px;
   overflow: hidden;
