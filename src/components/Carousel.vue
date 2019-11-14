@@ -61,18 +61,38 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+// It can not be scoped. The style not apply in the view I am using it.
 .cupcake-banner-image {
   width: 100%;
 }
 .VueCarousel-navigation .VueCarousel-navigation-button {
   color:#ee2461;
-  font-size: 40px;
+  font-size: 23px;
 }
 .VueCarousel-navigation .VueCarousel-navigation-next {
-  right: 60px;
+  right: 35px;
 }
 .VueCarousel-navigation .VueCarousel-navigation-prev {
-  left: 60px;
+  left: 35px;
+}
+// tablet
+@media (min-width: 768px) and (max-width: 1023px) {
+  .VueCarousel-navigation .VueCarousel-navigation-button {
+    font-size: 25px;
+  }
+}
+
+//Desktop
+@media (min-width: 1024px) {
+  .VueCarousel-navigation .VueCarousel-navigation-button {
+  font-size: 40px;
+  }
+  .VueCarousel-navigation .VueCarousel-navigation-next {
+    right: 60px;
+  }
+  .VueCarousel-navigation .VueCarousel-navigation-prev {
+    left: 60px;
+  }
 }
 </style>
