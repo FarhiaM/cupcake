@@ -1,6 +1,16 @@
 <template>
   <div class="carousel">
-    <carousel :per-page=1 autoplay :autoplayTimeout=3000 loop paginationActiveColor="#ff4674" paginationColor="#ffc0cb" :paginationSize=12 paginationPosition="bottom-overlay">
+    <carousel
+      :per-page="1"
+      autoplay
+      :autoplayTimeout="3000"
+      loop
+      paginationActiveColor="#ff4674"
+      paginationColor="#ffc0cb"
+      :paginationSize="12"
+      paginationPosition="bottom-overlay"
+      :navigationEnabled="true"
+    >
       <slide>
         <img
           class="cupcake-banner-image"
@@ -51,15 +61,38 @@ export default {
 };
 </script>
 
-<style>
-.cupcake-banner {
-  margin-top: 20px;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
+<style lang="scss">
+// It can not be scoped. The style not apply in the view I am using it.
 .cupcake-banner-image {
   width: 100%;
+}
+.VueCarousel-navigation .VueCarousel-navigation-button {
+  color:#ee2461;
+  font-size: 23px;
+}
+.VueCarousel-navigation .VueCarousel-navigation-next {
+  right: 35px;
+}
+.VueCarousel-navigation .VueCarousel-navigation-prev {
+  left: 35px;
+}
+// tablet
+@media (min-width: 768px) and (max-width: 1023px) {
+  .VueCarousel-navigation .VueCarousel-navigation-button {
+    font-size: 25px;
+  }
+}
+
+//Desktop
+@media (min-width: 1024px) {
+  .VueCarousel-navigation .VueCarousel-navigation-button {
+  font-size: 40px;
+  }
+  .VueCarousel-navigation .VueCarousel-navigation-next {
+    right: 60px;
+  }
+  .VueCarousel-navigation .VueCarousel-navigation-prev {
+    left: 60px;
+  }
 }
 </style>

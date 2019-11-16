@@ -53,7 +53,7 @@ a {
   border-radius: 40px;
   float: left;
   width: auto;
-  height: 50px;
+  height: 40px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -79,4 +79,10 @@ div .icon-wrapper a {
   margin-left: 5px;
 }
 
+@media (min-width: 1024px) {
+  //Desktop
+  .button-container {
+    height: 50px;
+  }
+}
 </style>
