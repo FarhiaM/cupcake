@@ -8,18 +8,21 @@
         <Buttons class="btnComponent" icon="fas fa-compass" iconRouter="/maps">Arrow</Buttons>
         <Buttons class="btnComponent" icon="far fa-sticky-note" iconRouter="/about">About</Buttons>
         <Buttons class="btnComponent" icon="fas fa-question" iconRouter="/faq">FAQ</Buttons>
-        <Buttons class="btnComponent" icon="fas fa-user-alt">Profile</Buttons>
+        <ButtonLogin class="btnComponent" icon="fas fa-user-alt">Profile</ButtonLogin>
     </nav>
   </header>
 </template>
 
 <script>
 import Buttons from './Buttons';
+import ButtonLogin from './ButtonLogin';
+
 
 export default {
   name: "TheHeader",
    components: {
-    Buttons
+    Buttons,
+    ButtonLogin
    }
 };
 </script>
