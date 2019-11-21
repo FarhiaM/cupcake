@@ -67,32 +67,32 @@ export default {
   width: 100%;
 }
 .VueCarousel-navigation .VueCarousel-navigation-button {
-  color:#ee2461;
-  font-size: 23px;
+  color:#ee2461 !important;
+  font-size: 23px !important;
 }
 .VueCarousel-navigation .VueCarousel-navigation-next {
-  right: 35px;
+  right: 35px !important;
 }
 .VueCarousel-navigation .VueCarousel-navigation-prev {
-  left: 35px;
+  left: 35px !important;
 }
 // tablet
 @media (min-width: 768px) and (max-width: 1023px) {
   .VueCarousel-navigation .VueCarousel-navigation-button {
-    font-size: 25px;
+    font-size: 25px !important;
   }
 }
 
 //Desktop
 @media (min-width: 1024px) {
   .VueCarousel-navigation .VueCarousel-navigation-button {
-  font-size: 40px;
+  font-size: 40px !important;
   }
   .VueCarousel-navigation .VueCarousel-navigation-next {
-    right: 60px;
+    right: 60px !important;
   }
   .VueCarousel-navigation .VueCarousel-navigation-prev {
-    left: 60px;
+    left: 60px !important;
   }
 }
 </style>
