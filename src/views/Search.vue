@@ -45,6 +45,9 @@ import SearchResultItem from '@/components/SearchResultItem'
     },
     beforeCreate (){
       console.log('APP key', process.env, this)
+    },
+    mounted (){
+      console.log(this.$http);
     }
   }
 </script>
