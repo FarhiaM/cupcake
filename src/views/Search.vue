@@ -42,6 +42,9 @@ import SearchResultItem from '@/components/SearchResultItem'
           }
         ]
       }
+    },
+    beforeCreate (){
+      console.log('APP key', process.env, this)
     }
   }
 </script>

@@ -23,7 +23,10 @@ export default {
    components: {
     Buttons,
     ButtonLogin
-   }
+   },
+    created (){
+      //console.log('Header component', this)
+    }
 };
 </script>
 
