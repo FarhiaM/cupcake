@@ -11,17 +11,16 @@ Vue.use(VueCarousel);
 Vue.config.productionTip = false;
 Vue.prototype.$axios = axios
 
-// axios.defaults.baseURL = 'https://api.edamam.com/'
+axios.defaults.baseURL = 'https://api.edamam.com/'
 
 // http://www.recipepuppy.com/api/?i=onions,garlic&q=omelet&p=3
 
-axios.defaults.baseURL = 'http://www.recipepuppy.com'
+// axios.defaults.baseURL = 'http://www.recipepuppy.com'
 
 axios.defaults.params = {
-  p: 1
-  // app_id: process.env.VUE_APP_API_ID,
-  // app_key: process.env.VUE_APP_API_KEY,
-  // dishType: 'dessert'
+    app_id: process.env.VUE_APP_API_ID,
+    app_key: process.env.VUE_APP_API_KEY,
+    dishType: 'dessert'
 }
 
 new Vue({

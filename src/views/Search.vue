@@ -53,7 +53,7 @@ import SearchResultItem from '@/components/SearchResultItem'
     },
     methods: {
       getSearchResults (searchText) {
-        this.$axios.get('/api', {
+        this.$axios.get('/search', {
           params: {
             q: searchText
           }
