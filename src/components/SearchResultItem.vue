@@ -1,6 +1,6 @@
 <template>
   <article class="search-item">
-    <img :src="require(`@/assets/${image}`)" :alt="`${title} picture`" class="picture">
+    <img :src="currImage" :alt="`${title} picture`" class="picture">
     <div class="info">
       <h4 class="title">{{ title }}</h4>
       <mark v-for="(label, index) in healthLabels" :key="index" class="tag">#{{ label }}</mark>
@@ -14,7 +14,12 @@
 <script>
   export default {
     name: 'SearchResultItem',
-    props: ['image', 'title', 'healthLabels', 'servings']
+    props: ['image', 'title', 'healthLabels', 'servings'],
+    computed: {
+      currImage() {
+        return this.image.startsWith('http') ? this.image : require(`@/assets/${this.image}`)
+      }
+    }
   }
 </script>
 

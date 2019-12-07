@@ -57,10 +57,7 @@ import SearchResultItem from '@/components/SearchResultItem'
           params: {
             q: searchText
           }
-        }).then(function(response) {
-          console.log("API response", response.data.results)
-          if(response.data.results && response.data.results.length > 0) this.results = response.data.results
-        })
+        }).then(response => (this.results = response.data.hits))
       }
     }
   }
