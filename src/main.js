@@ -5,6 +5,7 @@ import VueCarousel from 'vue-carousel';
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
 import axios from 'axios';
+import store from './store'
 
 Vue.use(VueCarousel);
 
@@ -25,5 +26,6 @@ axios.defaults.params = {
 
 new Vue({
     router,
+    store,
     render: h => h(App)
 }).$mount("#app");

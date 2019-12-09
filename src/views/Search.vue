@@ -1,73 +1,50 @@
 <template>
   <main class="search">
-    <search-field
-      @search="getSearchResults"
-    />
+    <search-field @search="getSearchResults" />
     <!-- @search is a coustomized event -->
     <section class="search-results">
-      <search-result-item v-for="result in results" :key="result.recipe.uri" :image="result.recipe.image" :title="result.recipe.label" :health-labels="result.recipe.healthLabels" :servings="result.recipe.yield" />
+      <search-result-item
+        v-for="result in getResultList"
+        :key="result.recipe.uri"
+        :image="result.recipe.image"
+        :title="result.recipe.label"
+        :health-labels="result.recipe.healthLabels"
+        :servings="result.recipe.yield"
+      />
     </section>
   </main>
 </template>
 
 <script>
-import SearchField from '@/components/SearchField'
-import SearchResultItem from '@/components/SearchResultItem'
-  export default {
-    name: 'Search',
-    components: {
-      SearchField,
-      SearchResultItem
-    },
-    data () {
-      return {
-        results: [
-          {
-            recipe: {
-              image: 'cupcakes_cookies.png',
-              label: 'Chocolate Cupckacke',
-              yield: 2, // servings
-              calories: 2,
-              uri: 'a',
-              healthLabels: ['vegan', 'vegetarian', 'paleo', 'dairy-free', 'gluten-free', 'wheat-free', 'fat-free', 'low-sugar', 'egg-free', 'peanut-free', 'tree-nut-free', 'soy-free', 'fish-free', 'shellfish-free']
-            }
-          },
-          {
-            recipe: {
-              image: 'cupcakes_cookies.png',
-              label: 'Chocolate Cupckacke',
-              yield: 2, // servings
-              calories: 2,
-              uri: 'b',
-              healthLabels: ['vegan', 'vegetarian', 'paleo', 'dairy-free', 'gluten-free', 'wheat-free', 'fat-free', 'low-sugar', 'egg-free', 'peanut-free', 'tree-nut-free', 'soy-free', 'fish-free', 'shellfish-free']
-            }
-          }
-        ]
-      }
-    },
-    beforeCreate (){
-      // console.log('APP key', process.env, this)
-    },
-    mounted (){
+import SearchField from "@/components/SearchField";
+import SearchResultItem from "@/components/SearchResultItem";
+import { mapGetters, mapActions } from "vuex";
 
-    },
-    methods: {
-      getSearchResults (searchText) {
-        this.$axios.get('/search', {
-          params: {
-            q: searchText
-          }
-        }).then(response => (this.results = response.data.hits))
-      }
+export default {
+  name: "Search",
+  components: {
+    SearchField,
+    SearchResultItem
+  },
+  computed: {
+    ...mapGetters(["getResultList"])
+  },
+  methods: {
+    ...mapActions(["getResultList"]),
+    getSearchResults() {
+      const userInput = this.$el.querySelector('input[name="search-input"]')
+        .value;
+      this.getResultList(userInput);
     }
   }
+};
 </script>
 
 <style lang="scss" scoped>
-  .search {
-    padding: 20px;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-rows: auto auto;
-  }
+.search {
+  padding: 20px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: auto auto;
+}
 </style>
