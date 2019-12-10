@@ -30,7 +30,6 @@ export default new Vuex.Store({
                         q: searchText
                     }
                 }).then(response => (state.recipe = response.data.hits));
-                console.log('testar committa!!!')
                 if (data.length > 0) {
                     commit('SET_RESULT_DATA', data);
                 } else {
