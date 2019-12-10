@@ -4,7 +4,7 @@
     <!-- @search is a coustomized event -->
     <section class="search-results">
       <search-result-item
-        v-for="result in getResultList"
+        v-for="result in resultList"
         :key="result.recipe.uri"
         :image="result.recipe.image"
         :title="result.recipe.label"
@@ -27,7 +27,7 @@ export default {
     SearchResultItem
   },
   computed: {
-    ...mapGetters(["getResultList"])
+    ...mapGetters(["resultList"])
   },
   methods: {
     ...mapActions(["getResultList"]),

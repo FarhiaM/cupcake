@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import axios from 'axios';
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        recipe: null,
+        recipe: {},
         error: null
     },
     getters: {
@@ -22,13 +23,14 @@ export default new Vuex.Store({
         },
     },
     actions: {
-        async getResultList({ commit }, searchText) {
+        async getResultList({ commit, state }, searchText) {
             try {
-                const data = await this.$axios.get('/search', {
+                const data = await axios.get('/search', {
                     params: {
                         q: searchText
                     }
-                }).then(response => (state = response.data.hits));
+                }).then(response => (state.recipe = response.data.hits));
+                console.log('testar committa!!!')
                 if (data.length > 0) {
                     commit('SET_RESULT_DATA', data);
                 } else {
