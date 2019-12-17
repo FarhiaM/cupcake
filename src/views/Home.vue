@@ -5,26 +5,10 @@
     <h3 class="Signika-Bold">Meet some candy options</h3>
 
     <div class="recipes">
-      <Option
-        title="Option A"
-        description="Tart marzipan tart pastry cake jelly-o. Sugar plum pudding macroon liqriouse I love. Pastry dessert cookie tart. I love I love topping danish."
-        :ingredients="['Candy cane cheesecake', 'Apple pie wafer', 'Tiramisu cupcake', 'Lemon drops faroki']"
-      >
-        <Buttons slot="button" iconText="See more" icon="fas fa-plus-circle"></Buttons>
-      </Option>
-
-      <Option
-        title="Option B"
-        description="Halvah wypas pudding I love candy toffee. Jelly beans chupa chups pudding danish I love donut. I love danish bonbon jelly-o I love gummies cotton candy marzipan danish. Donut sweet pastry jujubes croissant."
-        :ingredients="['Tootsie roll cheesecake', 'hupa chups wafer', 'Danish marzipan']"
-      >
-        <Buttons slot="button" iconText="See more" icon="fas fa-plus-circle"></Buttons>
-      </Option>
-
-      <Option
-        title="Option C"
-        description="Liquorice toffee marzipan lemon drops chocolate cake ice crearri."
-        :ingredients="['Chocolate marzipan jelly', 'Sweet lollipop ice cream', 'Souffié jelly-o bear clave sweet', 'Brownie pie gummi bears', 'Jelly beans dragée' ]"
+      <Option v-for= "option in options" :key="option.title"
+        :title="option.title"
+        :description="option.description"
+        :ingredients="option.ingredients"
       >
         <Buttons slot="button" iconText="See more" icon="fas fa-plus-circle"></Buttons>
       </Option>
@@ -48,6 +32,27 @@ export default {
     Carousel,
     Option,
     Buttons
+  },
+  data () {
+    return {
+      options: [
+        {
+          title:'Option A',
+          description: 'Tart marzipan tart pastry cake jelly-o. Sugar plum pudding macroon liqriouse I love. Pastry dessert cookie tart. I love I love topping danish.',
+          ingredients: ['Candy cane cheesecake', 'Apple pie wafer', 'Tiramisu cupcake', 'Lemon drops faroki'],
+        },
+        {
+          title:'Option B',
+          description: 'Halvah wypas pudding I love candy toffee. Jelly beans chupa chups pudding danish I love donut. I love danish bonbon jelly-o I love gummies cotton candy marzipan danish. Donut sweet pastry jujubes croissant.',
+          ingredients: ['Tootsie roll cheesecake', 'hupa chups wafer', 'Danish marzipan'],
+        },
+        {
+          title:'Option C',
+          description: 'Liquorice toffee marzipan lemon drops chocolate cake ice crearri.',
+          ingredients: ['Chocolate marzipan jelly', 'Sweet lollipop ice cream', 'Souffié jelly-o bear clave sweet', 'Brownie pie gummi bears', 'Jelly beans dragée'],
+        }
+      ]
+    }
   }
 };
 </script>
