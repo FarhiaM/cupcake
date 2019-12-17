@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Maps from "../views/Maps.vue";
 import Faq from "../views/Faq.vue";
+import Search from "../views/Search.vue";
 import About from "../views/About.vue";
 
 Vue.use(VueRouter);
@@ -26,6 +27,11 @@ const routes = [{
         path: "/faq",
         name: "faq",
         component: Faq
+    },
+    {
+        path: "/search",
+        name: "search",
+        component: Search
     }
 ];
 
